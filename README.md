@@ -24,12 +24,39 @@ Things you may want to cover:
 * ...
 
 ## membersテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
+### Association
+- belongs_to :group
+- belongs_to :user
 
+## userテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null: false|
+### Association
+- has_many :members
+- has_many :comments
+
+## groupテーブル
+|Column|Type|Options|
+|------|----|-------|
+|title|string|null: false|
+|user_id|integer|null: false, foreign_key: true|
+### Association
+- has_many :members
+- has_many :comments
+
+## commentテーブル
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
