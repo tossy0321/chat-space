@@ -40,6 +40,7 @@ Things you may want to cover:
 |password|string|null: false|
 ### Association
 - has_many :members
+- has_many :groups, through: :members
 - has_many :comments
 
 ## groupテーブル
