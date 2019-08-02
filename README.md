@@ -49,13 +49,14 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :members
-- has_many :user, through: :member
+- has_many :users, through: :members
 - has_many :comments
 
 ## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text||
+|image|text||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
