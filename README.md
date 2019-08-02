@@ -51,7 +51,7 @@ Things you may want to cover:
 - has_many :members
 - has_many :comments
 
-## commentテーブル
+## commentsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
