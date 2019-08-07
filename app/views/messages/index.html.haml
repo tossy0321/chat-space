@@ -1,0 +1,50 @@
+.flash-box
+.wrapper
+  .chat-side
+    .side-header
+      %p.side-header__user-name 石川
+      %ul.user-menu
+        %li.user-menu__edit-user
+          %a{:href => "/groups/new"}
+            %i.fa.fa-edit
+        %li.user-menu__new-group
+          %a{:href => "/users/934/edit"}
+            %i.fa.fa-cog
+    .groups
+      %a{:href => "/groups/1944/messages"}
+        .group
+          %p.group__group-name テスト
+          %p.group__latest-message こんにちは
+  .chat-main
+    .main-header
+      .current-group{"data-group_id" => "1944"}
+        %h2.current-group__name テスト
+        %ul.member-list
+          Member：
+          %li.member-list__member test
+          %li.member-list__member tecno
+          %li.member-list__member test
+          %li.member-list__member 石川
+      %a{:href => "/groups/1944/edit"}
+        .main-header__edit-btn Edit
+    .messages
+      .message{"data-message_id" => "4797"}
+        .upper-info
+          %p.upper-info__user 石川
+          %p.upper-info__date 2019/08/05(Mon) 18:49:38
+        %p.message__text こんにちは
+      .message{"data-message_id" => "4799"}
+        .upper-info
+          %p.upper-info__user 石川
+          %p.upper-info__date 2019/08/05(Mon) 18:51:56
+        %p.message__text こんばんは
+    .form
+      %form#new_message.new-message{"accept-charset" => "UTF-8", :action => "/groups/1944/messages", :enctype => "multipart/form-data", :method => "post"}
+        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+        %input{:name => "authenticity_token", :type => "hidden", :value => "NHeynGIYBcNX99wmccAmR4KR6iL1JYvcYe1kVm3fUzheMPDOsvIzOvcrYrwKVU2R9pv2eTY98g/NT92NvUQ+fg= ="}/
+        .input-box
+          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          %label.image-label{:for => "message_image"}
+            %i.fa.fa-image
+            %input#message_image.image-label__input{:name => "message[image]", :type => "file"}/
+        %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
