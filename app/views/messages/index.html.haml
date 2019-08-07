@@ -1,0 +1,52 @@
+
+.flash-box
+.wrapper
+  .chat-side
+    .side-header
+      %p.side-header__user-name test0321くん
+      %ul.user-menu
+        %li.user-menu__edit-user
+          %a{:href => "/groups/new"}
+            %i.fa.fa-edit
+        %li.user-menu__new-group
+          %a{:href => "/users/935/edit"}
+            %i.fa.fa-cog
+    .groups
+      %a{:href => "/groups/1952/messages"}
+        .group
+          %p.group__group-name テスト
+          %p.group__latest-message こんばんは
+      %a{:href => "/groups/1950/messages"}
+        .group
+          %p.group__group-name テスト
+          %p.group__latest-message まだメッセージがありません
+  .chat-main
+    .main-header
+      .current-group{"data-group_id" => "1952"}
+        %h2.current-group__name テスト
+        %ul.member-list
+          Member：
+          %li.member-list__member test0321くん
+      %a{:href => "/groups/1952/edit"}
+        .main-header__edit-btn Edit
+    .messages
+      .message{"data-message_id" => "4800"}
+        .upper-info
+          %p.upper-info__user test0321くん
+          %p.upper-info__date 2019/08/06(Tue) 20:13:13
+        %p.message__text こんにちは
+      .message{"data-message_id" => "4801"}
+        .upper-info
+          %p.upper-info__user test0321くん
+          %p.upper-info__date 2019/08/06(Tue) 20:13:23
+        %p.message__text こんばんは
+    .form
+      %form#new_message.new-message{"accept-charset" => "UTF-8", :action => "/groups/1952/messages", :enctype => "multipart/form-data", :method => "post"}
+        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+        %input{:name => "authenticity_token", :type => "hidden", :value => "9G+/+34PuHvT0ensXzLO/6RxlLTUKdrqZCgZRrbn+SB8hOH2FgjElBW694dUE1r1ZCvBRd9KG7v/zu6XMa01JA=="}/
+        .input-box
+          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          %label.image-label{:for => "message_image"}
+            %i.fa.fa-image
+            %input#message_image.image-label__input{:name => "message[image]", :type => "file"}/
+        %input.new-message__submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
