@@ -1,23 +1,6 @@
 .flash-box
 .wrapper
-  .chat-side
-    .side-header
-      %p.side-header__user-name 石川
-      %ul.user-menu
-        %li.user-menu__edit-user
-          %i.fa.fa-edit
-        %li.user-menu__new-group
-          %i.fa.fa-cog
-    .groups
-      =link_to ""
-      .group
-        - current_user.groups.each do |group|
-          .group
-          = link_to group_messages_path(group) do
-            .group__name
-              = group.name
-            .group__message
-              = group.show_last_message
+  = render partial: "shared/side_bar"
   .chat-main
     .main-header
       .current-group{data: {group_id: "1952"}}
@@ -28,7 +11,7 @@
       =link_to edit_group_path(@group) do
         .main-header__edit-btn edit
     .messages
-      = render @messages
+      = render partial: "messages/message", collection: @messages
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
