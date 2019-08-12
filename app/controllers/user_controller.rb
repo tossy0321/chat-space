@@ -13,7 +13,7 @@ class UserController < ApplicationController
 
   def index
   end
-
+  
   private
 
   def user_params

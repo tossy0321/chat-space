@@ -3,11 +3,11 @@
   = render partial: "shared/side_bar"
   .chat-main
     .main-header
-      .current-group{data: {group_id: "1952"}}
-        %h2.current-group__name テスト
+      .current-group{data: {group_id: "current.user"}}
+        %h2.current-group__name グループ名
         %ul.member-list
           Member：
-          %li.member-list__member test0321くん
+          %li.member-list__member
       =link_to edit_group_path(@group) do
         .main-header__edit-btn edit
     .messages

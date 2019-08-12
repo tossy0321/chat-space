@@ -44,6 +44,11 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
 
+
+gem 'carrierwave'
+gem 'mini_magick'
+
+
 end
 
 group :development do
@@ -62,7 +67,5 @@ gem "haml-rails"
 
 gem "font-awesome-rails"
 
-gem "devise"
+gem 'devise'
 
-gem 'carrierwave'
-gem 'mini_magick'
