@@ -6,8 +6,6 @@
   background-color: #38aef0;
 } 
 .wrapper {
-  height: 100%;
-  width: 100%;
   .chat-side {
     width: 300px;
     height: 100%;
@@ -18,6 +16,7 @@
       display: flex;
       line-height: 100px;
       font-weight: bold;
+      
       &__user-name{
         margin-left: 20px;
         margin-right: 20px;
@@ -53,6 +52,7 @@
       background-color: #2f3e51;
       height: calc( 100vh - 100px );
       padding-top: 20px;
+      overflow: scroll;
       .group{
         &__name{
           color: #ffffff;
@@ -69,13 +69,13 @@
     }
   }
   .chat-main {
-    width: calc(100vx - 300px);
+    width: calc(100vw - 300px);
     background-color: #fafafa;
     height: 100%;
+    float: left;
     .main-header {
       background-color: #ffffff;
       height: 100px;
-      box-sizing:border-box;
       .current-group{
         padding-left: 40px;
         padding-right: 40px;  
@@ -110,8 +110,10 @@
     .messages {
       height: calc( 100vh - 100px );
       padding-top: 46px;
+      overflow: scroll;
+      padding-bottom: 90px;
       .message {
-        margin-left: 340px;
+        margin-left: 40px;
         .upper-info{
           width: 100%;
           &__user{
@@ -139,8 +141,6 @@
     }    
     .form{
       background-color: #ddd;
-      clear: both;
-      margin-left: 300px;
       height: 90px;
       width: calc(100vw - 300px);
       padding-left: 40px;
@@ -153,25 +153,18 @@
         height: 50px;
         padding-left: 10px;
       }
-      &__mask{ 
-        position: absolute;
-        top: -1000px;
         &__image{
           padding-left: 10px;
         }
-      }
             .icon{
-              text-decoration: none;
-              position: absolute;
-              top: 1035px;
-              left: 910px;
               font-size: 20px;
+              position: absolute;
+              right: 165px;
+              bottom: 35px;
             }
             .hidden{
               text-indent: 100%;
-              white-space: nowrap;
-              overflow: hidden;
-              text-decoration: none;
+              display: none;
             }
       &__submit{
         width: 100px;
