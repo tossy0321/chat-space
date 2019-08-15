@@ -6,8 +6,6 @@
   background-color: #38aef0;
 } 
 .wrapper {
-  height: 100%;
-  width: 100%;
   .chat-side {
     width: 300px;
     height: 100%;
@@ -18,6 +16,7 @@
       display: flex;
       line-height: 100px;
       font-weight: bold;
+      
       &__user-name{
         margin-left: 20px;
         margin-right: 20px;
@@ -30,63 +29,66 @@
         margin-right: 20px;
         display: flex;
         &__edit-user{
+          text-decoration: none;
           color: #ffffff;
           margin-right: 5px;
+        .icon{
+          color: #ffffff;
+          font-size: 1.2em;
+          margin-right: 5px;
         }
-          .fa.fa-edit{
-            text-decoration: none;
-            color: #ffffff;
-          }
+        }
         &__new-group{
+          text-decoration: none;
+          color: #ffffff;
+        .fa.fa-cog {
+          font-size: 1.2em;
           color: #ffffff;
         }
-          .fa.fa-cog {
-            text-decoration: none;
-            color: #ffffff;
-          }
+        }
       }
     }
     .groups {
       background-color: #2f3e51;
       height: calc( 100vh - 100px );
+      padding-top: 20px;
+      overflow: scroll;
       .group{
-        margin-left: 20px;
-        margin-right: 20px;
-        padding-bottom: 1px;
-        &__group-name{
+        &__name{
           color: #ffffff;
-          padding-top: 20px;
           font-size: 15px;
           font-weight: bold;
+          text-decoration: none;
         }
-        &__latest-message{
+        &__message{
           color: #ffffff;
           padding-top: 5px;
-          font-size: 11px;  
+          font-size: 11px;
         }
       }
     }
   }
   .chat-main {
-    width: calc(100vx - 300px);
+    width: calc(100vw - 300px);
     background-color: #fafafa;
     height: 100%;
+    float: left;
     .main-header {
       background-color: #ffffff;
       height: 100px;
-      box-sizing:border-box;
       .current-group{
         padding-left: 40px;
         padding-right: 40px;  
         padding-top: 35px;
         float: left;
         &__name{
+          color: black;
           font-size: 20px;
-          padding-bottom: 15px;
         }
         .member-list{
           font-size: 12px;
           color: #999999;
+          padding-top: 5px;
           &__member{
             display: inline-block;
           }
@@ -101,16 +103,17 @@
         padding-top: 2px;
         float: right;
         border: solid 1px;
-        text-decoration: none;
         height: 40px;
-        
+        text-decoration: none;
       }
     }
     .messages {
       height: calc( 100vh - 100px );
       padding-top: 46px;
+      overflow: scroll;
+      padding-bottom: 90px;
       .message {
-        margin-left: 340px;
+        margin-left: 40px;
         .upper-info{
           width: 100%;
           &__user{
@@ -126,52 +129,51 @@
             margin-left: 49px;
           }
         }
-        &__text{
+        .lower-message{
           padding-top: 10px;
           padding-bottom: 40px;
           color: #434a54;
+          &__content{
+
+          }
         }
       }
-    }
-    .form {
+    }    
+    .form{
       background-color: #ddd;
-      clear: both;
-      margin-left: 300px;
       height: 90px;
       width: calc(100vw - 300px);
       padding-left: 40px;
       padding-top: 20px;
       position: absolute;
-      bottom: 0%;
-      .new-message{
-        position: relative;
-        .input-box{
-          &__text{
-            height: 50px;
-            padding-left: 10px;
-            width: calc(100vw - 495px);
-          }
-          .image-label{
-            font-size: 20px;
-            .fa.fa-image{
+      bottom: 0;
+      
+      &__message{
+        width: calc(100% - 155px);
+        height: 50px;
+        padding-left: 10px;
+      }
+        &__image{
+          padding-left: 10px;
+        }
+            .icon{
+              font-size: 20px;
               position: absolute;
-              bottom: 15px;
               right: 165px;
+              bottom: 35px;
             }
-            &__input{
+            .hidden{
+              text-indent: 100%;
               display: none;
             }
-          }
-        }
-        &__submit-btn{
-          width: 100px;
-          height: 50px;
-          background-color: #38aef0;
-          position: absolute;
-          right: 40px;
-          bottom: 0%;
-          color: #ffffff
-        }
+      &__submit{
+        width: 100px;
+        height: 50px;
+        background-color: #38aef0;
+        position: absolute;
+        right: 40px;
+        bottom: 20px;
+        color: #ffffff
       }
     }
   }

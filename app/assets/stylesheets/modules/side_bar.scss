@@ -1,0 +1,41 @@
+.chat-side {
+  box-sizing: border-box;
+  color: $white;
+  .side-header {
+    background-color: $side_blue_dark;
+    height: 100px;
+    &__user-name {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    &__lists {
+      .list {
+        display: inline-block;
+      }
+      .icon {
+        color: $white;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .groups {
+    background-color: $side_blue_light;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+    .group {
+      box-sizing: border-box;
+      text-decoration: none;
+      &__name {
+        color: $white;
+        font-size: 30px;
+        text-decoration: none;
+      }
+      &__message {
+        color: $white;
+        font-size: 11px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+}  
