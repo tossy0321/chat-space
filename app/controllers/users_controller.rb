@@ -1,4 +1,4 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
 
   def edit
   end
@@ -12,8 +12,13 @@ class UserController < ApplicationController
   end
 
   def index
+    @users = User.where('name LIKE(?)', "%#{params[:keyword]}%").where.not(id: current_user.id)
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
-  
+
   private
 
   def user_params
