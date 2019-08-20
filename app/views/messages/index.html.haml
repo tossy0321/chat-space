@@ -2,11 +2,11 @@
   = render partial: "shared/side_bar"
   .chat-main
     .main-header
-      .current-group{data: {group_id: "current.user"}}
+      .current-group{data: {group_id: "#{@group.id}"}}
         %h2.current-group__name
           = @group.name
         %ul.member-list
-          Member:
+          Member :
           - @group.group_users.each do |user_id|
             = user_id.user.name
           %li.member-list__member
