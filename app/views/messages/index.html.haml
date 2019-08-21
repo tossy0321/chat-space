@@ -11,7 +11,7 @@
             = user_id.user.name
           %li.member-list__member
       =link_to edit_group_path(@group) do
-        .main-header__edit-btn edit
+        .main-header__edit-btn Edit
     .messages
       = render partial: "messages/message", collection: @messages
       .form
