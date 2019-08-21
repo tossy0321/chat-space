@@ -115,18 +115,17 @@
       .message {
         margin-left: 40px;
         .upper-info{
-          width: 100%;
+          display: flex;
           &__user{
-            float: left;
             font-size: 16px;
             font-weight: bold;
             color: #434a54;
           }
           &__date{
             font-size: 12px;
-            padding-top: 4px;
+            margin-left: 10px;
             color: #999999;
-            margin-left: 49px;
+            ;
           }
         }
         .lower-message{
