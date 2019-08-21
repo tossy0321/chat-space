@@ -44,12 +44,6 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
   gem 'faker'
-
-
-gem 'carrierwave'
-gem 'mini_magick'
-
-
 end
 
 group :development do
@@ -72,6 +66,9 @@ gem "font-awesome-rails"
 gem 'devise'
 
 gem "pry-rails"
+
+gem 'carrierwave'
+gem 'mini_magick'
 
 group :production do
   gem 'unicorn', '5.4.1'
