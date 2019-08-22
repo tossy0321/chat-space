@@ -21,7 +21,7 @@ $(function() {
 
     function appendErrMsgToHTML(user) {
       var html = `<div>${user}</div>`
-      search_user.append(html);
+      search_user.append(html); 
     }
 
   $("#user-search-field").on("keyup", function() {

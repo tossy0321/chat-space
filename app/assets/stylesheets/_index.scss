@@ -28,10 +28,9 @@
         &__edit-user{
           text-decoration: none;
           color: #ffffff;
-          margin-right: 5px;
         .icon{
           color: #ffffff;
-          font-size: 1.2em;
+          font-size: 16px;
           margin-right: 5px;
         }
         }
@@ -39,7 +38,7 @@
           text-decoration: none;
           color: #ffffff;
         .fa.fa-cog {
-          font-size: 1.2em;
+          font-size: 16px;
           color: #ffffff;
         }
         }
@@ -93,15 +92,14 @@
       }
       &__edit-btn{
         color: #38aef0;
-        font-size: 20px;
         margin-right: 40px; 
-        margin-top: 28px;
+        margin-top: 30px;
         padding: 0 20px;
-        padding-top: 2px;
         float: right;
         border: solid 1px;
         height: 40px;
         text-decoration: none;
+        padding-top: 8px; 
       }
     }
     .messages {
